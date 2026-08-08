@@ -2268,3 +2268,66 @@ div {
         transition-duration: .01ms !important;
     }
 }
+
+/* =========================================
+   SERVICE VIDEO
+   Dedicated video container for service pages
+   ========================================= */
+
+.service-video {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #102d29;
+    box-shadow:
+        0 20px 50px rgba(16, 45, 41, 0.14),
+        0 4px 14px rgba(0, 0, 0, 0.06);
+    isolation: isolate;
+}
+
+.service-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 680px;
+    object-fit: contain;
+    background: #102d29;
+    border: 0;
+    outline: none;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .service-video {
+        min-height: 420px;
+    }
+
+    .service-video video {
+        min-height: 420px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .service-video {
+        border-radius: 18px;
+        width: 100%;
+    }
+
+    .service-video video {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .service-video {
+        border-radius: 14px;
+    }
+}
