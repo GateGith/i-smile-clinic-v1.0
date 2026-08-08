@@ -1,1 +1,66 @@
+/* =========================================================
+   I SMILE — RESPONSIVE OVERRIDES
+   ========================================================= */
 
+@media (max-width: 850px) {
+
+    body {
+        padding-bottom: 0;
+    }
+
+    .header-content {
+        padding-inline: 2px;
+    }
+
+    .nav-menu {
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .video-wrapper {
+        background: var(--green-black);
+    }
+
+    .bg-video {
+        object-position: center center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /*
+       Mobile video:
+       keep the clinic entrance visible as much as possible.
+    */
+
+    .bg-video {
+        object-position: center center;
+    }
+
+    /*
+       Prevent the fixed bottom navigation from
+       covering the last content.
+    */
+
+    main {
+        padding-bottom: 66px;
+    }
+
+    /*
+       Make service images feel more premium on touch devices.
+    */
+
+    .service-premium-cover {
+        aspect-ratio: 16 / 10;
+    }
+
+    /*
+       Gallery captions are always visible on touch screens.
+    */
+
+    .gallery-editorial-grid .caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
