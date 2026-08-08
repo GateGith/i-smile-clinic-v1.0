@@ -1,1 +1,170 @@
+/* =========================================================
+   I SMILE — PREMIUM ANIMATIONS
+   ========================================================= */
 
+
+/* Hero entrance */
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heroFadeScale {
+    from {
+        opacity: 0;
+        transform: scale(.88);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.video-content .hero-badge {
+    animation:
+        heroFadeUp 700ms ease both;
+}
+
+
+.video-content .doctor-mini {
+    animation:
+        heroFadeScale 800ms 120ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+.video-content h1 {
+    animation:
+        heroFadeUp 800ms 220ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+.video-content .hero-subtitle {
+    animation:
+        heroFadeUp 800ms 320ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+.video-content .hero-actions {
+    animation:
+        heroFadeUp 800ms 420ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+/* Doctor subtle breathing */
+
+@keyframes doctorGlow {
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 8px rgba(255,255,255,.08),
+            0 15px 45px rgba(0,0,0,.30);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 11px rgba(69,123,112,.13),
+            0 18px 55px rgba(0,0,0,.35);
+    }
+}
+
+.doctor-mini {
+    animation:
+        heroFadeScale 800ms 120ms cubic-bezier(.2,.8,.2,1) both,
+        doctorGlow 4s 1.2s ease-in-out infinite;
+}
+
+
+/* Button hover */
+
+@keyframes subtlePulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+.nav-phone-header a:hover {
+    animation: subtlePulse 1.4s ease-in-out infinite;
+}
+
+
+/* Floating WhatsApp */
+
+@keyframes whatsappFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.floating-cta-wa a {
+    animation:
+        whatsappFloat 3s ease-in-out infinite;
+}
+
+
+/* Service cards */
+
+.service-premium-card {
+    animation:
+        heroFadeUp 700ms ease both;
+}
+
+.service-premium-card:nth-child(2) {
+    animation-delay: 70ms;
+}
+
+.service-premium-card:nth-child(3) {
+    animation-delay: 140ms;
+}
+
+.service-premium-card:nth-child(4) {
+    animation-delay: 210ms;
+}
+
+.service-premium-card:nth-child(5) {
+    animation-delay: 280ms;
+}
+
+.service-premium-card:nth-child(6) {
+    animation-delay: 350ms;
+}
+
+.service-premium-card:nth-child(7) {
+    animation-delay: 420ms;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .doctor-mini,
+    .floating-cta-wa a,
+    .service-premium-card,
+    .video-content .hero-badge,
+    .video-content h1,
+    .video-content .hero-subtitle,
+    .video-content .hero-actions {
+        animation: none !important;
+    }
+}
